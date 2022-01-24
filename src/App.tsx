@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Post from './Post';
 
 function App() {
+  const [posts, setPosts] = useState([
+    {
+      username: 'suntmatei',
+      caption: 'Acesta este Radu Lupsa',
+      imageUrl: 'http://www.cs.ubbcluj.ro/~rlupsa/rlupsa.jpg'
+    },
+    {
+      username: 'suntmatei',
+      caption: 'Acesta este Radu Lupsa',
+      imageUrl: 'http://www.cs.ubbcluj.ro/~rlupsa/rlupsa.jpg'
+    },
+  ]);
+
   return (
     <div className="App">
         <div className="app__header">
@@ -10,9 +23,11 @@ function App() {
                  alt="Instagram"
             />
         </div>
-      <Post username="suntmatei" caption="Acesta este Radu Lupsa" imageUrl="http://www.cs.ubbcluj.ro/~rlupsa/rlupsa.jpg"/>
-      <Post username="suntmatei" caption="Si acesta este Radu Lupsa" imageUrl="http://www.cs.ubbcluj.ro/~rlupsa/rlupsa.jpg"/>
-      <Post username="suntmatei" caption="Va vine sa credeti sau nu si acesta este Radu Lupsa" imageUrl="http://www.cs.ubbcluj.ro/~rlupsa/rlupsa.jpg"/>
+      {
+        posts.map(post => (
+          <Post username={post.username} caption={post.caption} imageUrl={post.imageUrl}/>
+        ))
+      }
     </div>
   );
 }
