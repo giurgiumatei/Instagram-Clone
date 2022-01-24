@@ -14,11 +14,7 @@ function Post({ username, caption, imageUrl } : PostProps) {
                 />
                 <h3>{username}</h3>
             </div>
-            
-            {/* header -> avatar + username */}
-
             <img className='post__image' src={imageUrl} alt="Darth Vader" />
-
             <h4 className='post__text'><strong>{username}</strong> {caption}</h4>
         </div>
     );
