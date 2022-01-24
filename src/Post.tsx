@@ -1,12 +1,7 @@
 import React from 'react';
 import './Post.css';
 import { Avatar } from '@mui/material';
-
-interface PostProps {
-    username : string,
-    caption : string,
-    imageUrl : string,
-}
+import {Post as PostProps} from './Interfaces/Post';
 
 function Post({ username, caption, imageUrl } : PostProps) {
     return (
