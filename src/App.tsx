@@ -10,9 +10,9 @@ function App() {
                  alt="Instagram"
             />
         </div>
-      <Post/>
-      <Post/>
-      <Post/>
+      <Post username="suntmatei" caption="Acesta este Radu Lupsa" imageUrl="http://www.cs.ubbcluj.ro/~rlupsa/rlupsa.jpg"/>
+      <Post username="suntmatei" caption="Si acesta este Radu Lupsa" imageUrl="http://www.cs.ubbcluj.ro/~rlupsa/rlupsa.jpg"/>
+      <Post username="suntmatei" caption="Va vine sa credeti sau nu si acesta este Radu Lupsa" imageUrl="http://www.cs.ubbcluj.ro/~rlupsa/rlupsa.jpg"/>
     </div>
   );
 }
