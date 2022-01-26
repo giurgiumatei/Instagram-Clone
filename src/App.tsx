@@ -25,14 +25,16 @@ function App() {
           alt="Instagram"
         />
       </div>
-      {posts.map(({id, post}) => (
-        <Post
-          key={id}
-          username={post.data.username}
-          caption={post.data.caption}
-          imageUrl={post.data.imageUrl}
-        />
-      ))}
+      {posts.map(post => {
+        return (
+          <Post
+            {...console.log(post)}
+            key={post.id}
+            username={post.data.username}
+            caption={post.data.caption}
+            imageUrl={post.data.imageUrl} />
+        );
+      })}
     </div>
   );
 }
